@@ -1,6 +1,9 @@
+.devcontainer/devcontainer.json
 .env.example
 .gitignore
 .streamlit/config.toml
+BATCH_CAPACITY.md
+BATCH_DATASET.md
 DATASET.md
 MODEL_CARD.md
 README.md
@@ -8,6 +11,7 @@ RELEASE_FILES.txt
 api/__init__.py
 api/main.py
 assets/styles/glassmorphism.css
+benchmarks/batch_capacity.py
 data/demo.csv
 fraudshield/__init__.py
 fraudshield/batch.py
@@ -26,6 +30,8 @@ fraudshield/train.py
 fraudshield/workflows.py
 models/fraudshield.joblib
 models/metadata.json
+reports/batch-capacity-targets.json
+reports/batch-capacity.json
 reports/correlation.csv
 reports/eda.json
 reports/experiment-v2.json

@@ -63,11 +63,15 @@ Groq `openai/gpt-oss-20b` uses strict JSON Schema. Ollama `qwen3:4b` is optional
 
 ### Investigation and Copilot
 
+Copilot accepts plain-language questions about the selected transaction, including timing, payment, account details, model scores, and human review status. Ask several questions together or follow up with “Was that unusually high?” after asking for the amount. The last eight turns stay scoped to the current investigation in the current session. Basic facts are retrieved in Python, so a verified Groq connection can still produce an answer labelled **Python**. Supported analytical questions can use Groq to prioritize verified report evidence. A reply that also includes local facts identifies those facts separately.
+
+The public catalog records the hour only. A reply such as “23:00” means the recorded hour, with exact minutes, seconds and timezone unavailable. The optional local catalog can provide a recorded date and time and additional account or location fields. These fields, raw chat, review notes, and identifiers stay outside the Copilot provider request. Missing fields are identified in the reply. Amount comparisons use a dataset-wide percentile and do not imply a customer-specific anomaly.
+
 - **Overview** separates local investigation activity from recorded historical outcomes. The demo never simulates live banking traffic.
 - **Explorer** supports ID search, category/payment/device filters, location, amount and retry ranges, sorting, and pagination. Demonstration shortcuts are calculated using the loaded model.
 - **Fraud Investigation** shows the model score against the operating threshold, input values, signed SHAP changes, and a waterfall that reconstructs the score. Copilot answers supported questions about the current transaction, such as why it was flagged, which factors matter, and what to verify. It routes a question locally to an approved intent and sends only that intent and approved evidence to the provider. Raw chat text, credentials, IDs, review notes, and history from other cases stay out of provider requests.
 - **Saved Fraud Cases** keeps prediction history and human review events. Status changes and notes are saved transactionally. Cases deduplicate by transaction ID and model version. The initial migration records the existing status without inferring earlier review events. Export a case with its review history as JSON or export a filtered page as CSV.
-- **Batch Prediction** accepts UTF-8 CSVs up to 2 MB and 1,000 rows. It validates feature fields and file structure, previews the input, and scores in small batches. Reports are requested only when a flagged record is opened. Reports and Copilot for uploads in public sessions use Python.
+- **Batch Prediction** accepts UTF-8 CSVs up to **5 MB (5,000,000 bytes)** and **25,000 rows**, enforced independently. It validates inputs, runs vectorized inference in bounded blocks, paginates results, and generates CSV exports on demand. Individual flagged rows can be opened for SHAP and Copilot. Public uploaded-row explanations use Python. [Input guide and sample download](BATCH_DATASET.md) · [Local capacity benchmarks](BATCH_CAPACITY.md)
 - **Settings** displays artifact and database status, the active model, and provider connectivity with an explicit connection check.
 
 ### Run the API and tests
@@ -180,7 +184,7 @@ FRAUDSHIELD_USE_LOCAL_DATA = "0"
 LLM_PROVIDER = "python"
 ```
 
-3. Select **Deploy**, then open the public URL in two independent browser sessions. Verify both demo investigations, isolated case history, a review with notes, and CSV upload within the 2 MB and 1,000-row limits.
+3. Select **Deploy**, then open the public URL in two independent browser sessions. Verify both demo investigations, isolated case history, a review with notes, and CSV upload within the 5 MB and 25,000-row limits.
 4. For optional Groq, change `LLM_PROVIDER` to `"groq"` and add `GROQ_MODEL = "openai/gpt-oss-20b"`, `GROQ_API_KEY` with a fresh owner credential, and `LLM_REQUESTS_PER_MINUTE = "5"` in Cloud Secrets. The limit is per running process. Keep the initial public release on Python if you want to avoid external provider calls entirely.
 
 Public mode forces the synthetic catalog, creates a separate temporary SQLite database per Streamlit session and disables shared FastAPI data routes. Use the FastAPI process on a trusted local interface. Authentication, durable shared storage, reviewer identity, production privacy controls, and monitoring require a separate production design. Streamlit runtime dependencies are pinned in `requirements.txt`. Optional research libraries are pinned separately to keep the hosted installation lean.

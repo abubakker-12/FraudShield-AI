@@ -19,6 +19,10 @@ ENGINEERED = ["overnight", "repeat_failures", "short_interval",
 
 
 def features(frame: pd.DataFrame) -> pd.DataFrame:
+    return engineer_features(validate_features(frame))
+
+
+def validate_features(frame: pd.DataFrame) -> pd.DataFrame:
     missing = sorted(set(FIELDS) - set(frame))
     if missing:
         raise ValueError(f"Missing features: {', '.join(missing)}")
@@ -36,7 +40,12 @@ def features(frame: pd.DataFrame) -> pd.DataFrame:
         if not values.str.len().between(1, 80).fillna(False).all():
             raise ValueError(f"Invalid category for {name}")
         x[name] = values.astype(object)
-    x["overnight"] = (x.hour_of_day.lt(7) | x.hour_of_day.ge(22)).astype(int)
+    return x
+
+
+def engineer_features(validated: pd.DataFrame) -> pd.DataFrame:
+    # Assign returns a separate frame, preserving the selected source rows for the investigation workflow.
+    x = validated.assign(overnight=(validated.hour_of_day.lt(7) | validated.hour_of_day.ge(22)).astype(int))
     x["repeat_failures"] = x.failed_attempts.ge(2).astype(int)
     x["short_interval"] = x.time_since_last_txn_hrs.le(0.5).astype(int)
     x["international_repeat_failures"] = x.is_international * x.repeat_failures

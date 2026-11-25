@@ -1,13 +1,15 @@
 """Case, batch and system-health pages."""
 import hashlib
 import json
+from functools import partial
 from html import escape
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from .batch import read_upload
+from .batch import UPLOAD_BYTES, UPLOAD_ROWS, export_predictions, prediction_frame, read_upload, score_upload
 from .dashboard import AMBER, GREEN, RED, chart, metrics, report_panel
 from .features import FIELDS, ROOT
 from .glass import band
@@ -112,7 +114,8 @@ def example_csv():
 
 def batch(service, provider, public):
     st.header("Batch Prediction")
-    st.caption("CSV · UTF-8 · Up to 1,000 rows and 2 MB. Open a flagged row to generate its report.")
+    st.caption(f"CSV · UTF-8 · Up to {UPLOAD_ROWS:,} rows and {UPLOAD_BYTES / 1_000_000:g} MB. "
+               "Open a flagged row to generate its report.")
     with st.container(key="fs_panel_upload"):
         a, b = st.columns(2)
         a.download_button("Download CSV template", ",".join(FIELDS) + "\n", "batch-template.csv", "text/csv")
@@ -121,48 +124,73 @@ def batch(service, provider, public):
             st.code("\n".join(f"{field:<25} {label(field)}" for field in FIELDS), language=None)
         upload = st.file_uploader("Transaction CSV", type=["csv"])
     if not upload:
+        for state_key in ("validated_batch", "batch_result"):
+            st.session_state.pop(state_key, None)
         return
     try:
-        if upload.size > 2_000_000:
-            raise ValueError("Upload a CSV smaller than 2 MB.")
-        raw = upload.getvalue()
-        key = hashlib.sha256(raw).hexdigest()
-        if st.session_state.get("validated_batch_key") != key:
-            st.session_state.validated_batch = read_upload(raw)
-            st.session_state.validated_batch_key = key
-        frame = st.session_state.validated_batch
+        if upload.size > UPLOAD_BYTES:
+            raise ValueError(f"Upload a CSV no larger than {UPLOAD_BYTES / 1_000_000:g} MB.")
+        upload_id = getattr(upload, "file_id", None)
+        cached = st.session_state.get("validated_batch")
+        if not isinstance(cached, tuple):
+            cached = None
+        if cached and upload_id is not None and cached[0] == upload_id:
+            _, key, frame = cached
+        else:
+            raw = upload.getvalue()
+            key = hashlib.sha256(raw).hexdigest()
+            if cached and cached[1] == key:
+                frame = cached[2]
+            else:
+                st.session_state.pop("batch_result", None)
+                frame = read_upload(raw)
+            st.session_state.validated_batch = (upload_id, key, frame)
     except ValueError as error:
+        for state_key in ("validated_batch", "batch_result"):
+            st.session_state.pop(state_key, None)
         st.error(str(error))
         return
     with st.expander("Validated data preview"):
         st.dataframe(frame.head(10).rename(columns=label), hide_index=True, width="stretch")
     if st.button("Score batch", type="primary"):
         progress = st.progress(0, text="Scoring batch")
-        scores = []
-        for start in range(0, len(frame), 250):
-            scores.extend(service.scorer.batch(frame.iloc[start:start+250]))
-            progress.progress(len(scores) / len(frame), text=f"Scored {len(scores):,} of {len(frame):,}")
-        st.session_state.batch_result = (key, pd.DataFrame(scores))
-    previous = st.session_state.get("batch_result")
-    if not previous or previous[0] != key:
+        st.session_state.batch_result = score_upload(
+            service.scorer, frame,
+            on_progress=lambda n: progress.progress(n / len(frame), text=f"Scored {n:,} of {len(frame):,}"),
+        )
+    scores = st.session_state.get("batch_result")
+    if scores is None:
         return
-    result = previous[1].copy()
-    result.insert(0, "Source record", result.index + 1)
-    result["Prediction"] = result.suspected_fraud.map({True: "Suspected fraud", False: "Likely legitimate"})
-    flagged = result[result.suspected_fraud]
-    metrics([("Rows scored", len(result)), ("Suspected fraud", len(flagged)), ("Likely legitimate", len(result)-len(flagged))])
-    chart(px.histogram(result, x="risk", color="Prediction", title="Batch score distribution",
-                       labels={"risk": "Model score"},
-                       color_discrete_map={"Suspected fraud": RED, "Likely legitimate": GREEN}).update_xaxes(tickformat=".0%"))
+    metadata = service.scorer.metadata
+    flags = scores.astype(float) >= metadata["threshold"]
+    flagged = np.flatnonzero(flags)
+    metrics([("Rows scored", len(scores)), ("Suspected fraud", len(flagged)), ("Likely legitimate", len(scores)-len(flagged))])
+    edges = np.linspace(0, 1, 21)
+    distribution = pd.DataFrame({
+        "Model score": np.tile((edges[1:] + edges[:-1]) / 2, 2),
+        "Transactions": np.concatenate([np.histogram(scores[flags], edges)[0], np.histogram(scores[~flags], edges)[0]]),
+        "Prediction": ["Suspected fraud"] * 20 + ["Likely legitimate"] * 20,
+    })
+    chart(px.bar(distribution, x="Model score", y="Transactions", color="Prediction", title="Batch score distribution",
+                 color_discrete_map={"Suspected fraud": RED, "Likely legitimate": GREEN}).update_xaxes(tickformat=".0%"))
     choice = st.selectbox("Show predictions", ["All", "Suspected fraud", "Likely legitimate"])
-    visible = result if choice == "All" else result[result.Prediction.eq(choice)]
+    indexes = np.arange(len(scores)) if choice == "All" else (flagged if choice == "Suspected fraud" else np.flatnonzero(~flags))
+    page = st.number_input("Result page", 1, (len(indexes) + 999) // 1000) if len(indexes) > 1000 else 1
+    visible = prediction_frame(scores, metadata, indexes[(page - 1) * 1000:page * 1000])
     st.dataframe(visible.drop(columns="suspected_fraud"), hide_index=True, width="stretch",
                  column_config={"risk": st.column_config.NumberColumn("Model score", format="percent"),
                                 "threshold": st.column_config.NumberColumn("Review threshold", format="percent"),
                                 "model_version": "Model version"})
-    st.download_button("Download predictions", safe_csv(result.to_dict("records")), "batch-predictions.csv", "text/csv")
+    st.download_button("Download predictions", partial(export_predictions, scores, metadata),
+                       "batch-predictions.csv", "text/csv", on_click="ignore")
     if len(flagged):
-        row_number = st.selectbox("Flagged record to investigate", flagged["Source record"].tolist())
+        if len(flagged) <= 1000:
+            row_number = st.selectbox("Flagged record to investigate", (flagged + 1).tolist())
+        else:
+            row_number = st.number_input("Flagged record to investigate", 1, len(scores), int(flagged[0]) + 1)
+            if not flags[row_number - 1]:
+                st.caption("Choose the source record number of a flagged transaction.")
+                return
         if public:
             st.caption("Uploaded transaction reports use the offline explanation engine in the public workspace.")
         if st.button("Open in investigation workspace"):

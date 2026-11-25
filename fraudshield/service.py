@@ -10,10 +10,10 @@ import joblib
 import pandas as pd
 
 from .explanations import ExplanationEngine
-from .features import CAT, FIELDS, RAW, ROOT, features
+from .features import CAT, FIELDS, RAW, ROOT, engineer_features, features
 from .storage import Store
 from .presentation import display
-from .reports import report
+from .reports import LOCAL_FIELDS, report
 
 
 class ModelUnavailable(RuntimeError):
@@ -34,7 +34,7 @@ class Catalog:
 
     @cached_property
     def data(self):
-        columns = ["transaction_id", *FIELDS] + ([] if self.synthetic else ["is_fraud", "fraud_type"])
+        columns = ["transaction_id", *FIELDS] + ([] if self.synthetic else ["is_fraud", "fraud_type", *LOCAL_FIELDS])
         data = pd.read_csv(self.path, usecols=columns).set_index("transaction_id")
         if data.index.hasnans or not data.index.is_unique:
             raise ValueError("Transaction IDs must be present and unique")
@@ -70,6 +70,12 @@ class Catalog:
     def get(self, transaction_id):
         return self.data.loc[transaction_id, FIELDS].to_dict()
 
+    def copilot_attributes(self, transaction_id):
+        if self.synthetic or transaction_id not in self.data.index:
+            return {}
+        row = self.data.loc[transaction_id, list(LOCAL_FIELDS)]
+        return row.dropna().to_dict()
+
     def actual(self, transaction_id):
         if self.synthetic:
             return None
@@ -104,6 +110,9 @@ class Scorer:
     def batch(self, frame):
         matrix = self.prep.transform(features(frame))
         return [self.result(score) for score in self._score(matrix)]
+
+    def score_validated_batch(self, frame):
+        return self._score(self.prep.transform(engineer_features(frame)))
 
     def explain(self, row):
         values = tuple(row[name] for name in FIELDS)

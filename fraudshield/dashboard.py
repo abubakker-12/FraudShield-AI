@@ -313,7 +313,7 @@ def report_panel(explanation):
     st.caption(report["limitations"]["text"])
 
 
-def copilot_panel(result, engine, provider):
+def copilot_panel(result, engine, provider, service=None):
     st.subheader("FraudShield Copilot")
     st.caption(f"{provider.title()} · {engine.availability(provider)}")
     key = (result["transaction_id"], result["model_version"], result.get("analyzed_at"), result["risk"])
@@ -331,7 +331,12 @@ def copilot_panel(result, engine, provider):
     question = st.chat_input("Ask about the selected transaction", max_chars=350) or question
     if question:
         with st.spinner("Checking the available evidence…"):
-            answer, source = copilot(engine, result, question, provider)
+            tid = result["transaction_id"]
+            attributes = service.catalog.copilot_attributes(tid) if service and not tid.startswith("BATCH-") else {}
+            review = service.store.review_status(tid, result["model_version"]) if service else None
+            answer, source = copilot(engine, result, question, provider, history=history,
+                                     attributes=attributes, review_status=review,
+                                     amount_stats=intelligence()[0]["amount"])
         history = [*history, (question, answer, source)][-8:]
         st.session_state.copilot_history = history
     for question, answer, source in history:

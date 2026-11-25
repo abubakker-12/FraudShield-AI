@@ -118,6 +118,14 @@ class Store:
                                 "WHERE case_id=? ORDER BY id DESC", (case_id,)).fetchall()
         return [dict(event) for event in events]
 
+    def review_status(self, transaction_id, model_version):
+        with self.connect() as db:
+            row = db.execute(
+                "SELECT r.status FROM reviews r JOIN investigations i ON i.id=r.case_id "
+                "WHERE i.transaction_id=? AND i.model_version=?", (transaction_id, model_version)
+            ).fetchone()
+        return row["status"] if row else None
+
     def review(self, case_id, status, notes=None):
         if status not in STATUSES:
             raise ValueError("Invalid review status")

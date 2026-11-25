@@ -1,5 +1,6 @@
 """Optional provider selection over grounded, validated narrative components."""
 import json
+import logging
 import os
 from collections import OrderedDict, deque
 from threading import Lock
@@ -10,6 +11,8 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, ConfigDict, Field
 
 from .features import ROOT
+
+logger = logging.getLogger(__name__)
 
 load_dotenv(ROOT / ".env")
 GROQ = "https://api.groq.com/openai/v1"
@@ -159,7 +162,14 @@ class ExplanationEngine:
                     if len(self.cache) > 256:
                         self.cache.popitem(last=False)
                     return choice, provider
-            except (requests.RequestException, ValueError, KeyError, IndexError, TypeError, AttributeError):
+                else:
+                    logger.info("Explanation provider request budget exhausted: %s", provider)
+            except requests.RequestException as exc:
+                logger.info("Explanation provider request failed: %s (%s)", provider, type(exc).__name__)
+                self.provider_ready[provider] = False
+            except (ValueError, KeyError, IndexError, TypeError, AttributeError) as exc:
+                logger.info("Explanation provider response or evidence validation failed: %s (%s)",
+                            provider, type(exc).__name__)
                 self.provider_ready[provider] = False
         return default, "python"
 

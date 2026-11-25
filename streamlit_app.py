@@ -33,7 +33,7 @@ def resources(use_local):
     return Catalog(path), Scorer(), ExplanationEngine({key: setting(key) for key in keys})
 
 
-def investigation(engine, provider, public):
+def investigation(engine, provider, public, service=None):
     st.header("Fraud Investigation")
     result = st.session_state.get("analysis")
     if result is None:
@@ -58,7 +58,8 @@ def investigation(engine, provider, public):
     with st.container(key="fs_panel_report"):
         report_panel(result["explanation"])
     with st.container(key="fs_panel_copilot"):
-        copilot_panel(result, engine, "python" if public and result["transaction_id"].startswith("BATCH-") else provider)
+        copilot_panel(result, engine, "python" if public and result["transaction_id"].startswith("BATCH-") else provider,
+                      service)
 
 
 def performance(m):
@@ -142,7 +143,7 @@ def main():
     else:
         actions = {
             "Overview": lambda: overview(service.store, mode), "Transaction Explorer": lambda: explorer(service, provider),
-            "Fraud Investigation": lambda: investigation(engine, provider, public), "Saved Fraud Cases": lambda: saved(service.store),
+            "Fraud Investigation": lambda: investigation(engine, provider, public, service), "Saved Fraud Cases": lambda: saved(service.store),
             "Model Performance": lambda: performance(scorer.metadata), "Batch Prediction": lambda: batch(service, provider, public),
         }
         try:
