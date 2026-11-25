@@ -1,8 +1,12 @@
 # FraudShield AI
 
+[![Launch Live Demo](https://img.shields.io/badge/Launch%20Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://fraudshield-ai-fraud-trasnaction-detection.streamlit.app/)
+
 **Intelligent Fraud Detection and AI-Powered Investigation**
 
 FraudShield helps an analyst triage a transaction, understand its model score, and record a human decision with an audit trail. It combines a historical fraud command center, a transaction workspace, signed SHAP evidence, structured investigation reports, and FraudShield Copilot. The included 500 synthetic transactions and pretrained model make the workspace runnable without a private dataset, model training, or an API credential.
+
+**Live app** · [Open FraudShield AI on Streamlit Community Cloud](https://fraudshield-ai-fraud-trasnaction-detection.streamlit.app/)
 
 The seven Streamlit pages share a glassmorphism design. Overview separates saved analyses in the current workspace from recorded historical outcomes. An empty workspace displays an empty activity panel.
 
@@ -89,7 +93,7 @@ Use `http://localhost:8000/docs` for OpenAPI and interactive request examples. R
 
 ## Executed results
 
-The training source is **Bank Transaction Fraud Detection Dataset**, published by **Nafiul Islam** on Kaggle under **CC0 1.0 Universal**. FraudShield uses it for offline exploration, chronological customer-disjoint training, training-only feature transformation, and evaluation. The shipped XGBoost artifact is the original trained version, and the browser demo uses a separate synthetic file. [Original Kaggle source](https://www.kaggle.com/datasets/nafiulislam490/bank-transaction-fraud-detection-dataset?resource=download) · [Dataset and model provenance](DATASET.md)
+The training source is **Bank Transaction Fraud Detection Dataset**, published by **Nafiul Islam** on Kaggle under **CC0 1.0 Universal**. FraudShield uses it for offline exploration, chronological customer-disjoint training, training-only feature transformation, and evaluation. The shipped XGBoost artifact is the original trained version, and the browser demo uses a separate synthetic file. [Dataset and model provenance](DATASET.md)
 
 The source contains **1,000,000 transactions**, **55,255 recorded fraud cases (5.53%)**, and **198,662 customers**. The audit found zero duplicate rows, transaction ID duplicates, and hour mismatches. All 944,745 missing values are in `fraud_type`, whose presence exactly identifies the target.
 
@@ -162,6 +166,10 @@ git push -u origin main
 Replace `YOUR-ACCOUNT` before adding the remote. If using an existing repository, audit its history and tracked files before any push. Ignore rules apply to untracked files and do not remove files from prior commits. [GitHub guidance on adding files securely](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)
 
 ## Deploy to Streamlit Community Cloud
+
+The [live deployment](https://fraudshield-ai-fraud-trasnaction-detection.streamlit.app/) runs on Streamlit Community Cloud with Groq-backed investigation reports and FraudShield Copilot. The project owner reported that all seven manual live AI verification checks passed. The app uses the Python fallback when the configured provider is unavailable.
+
+The steps below reproduce the deployment starting in offline mode. Step 4 enables Groq.
 
 1. After the approved GitHub release, select **Create app** in Streamlit Community Cloud. Set the repository to `YOUR-ACCOUNT/fraudshield-ai`, branch to `main`, and entry point to `streamlit_app.py`. Under **Advanced settings**, select **Python 3.11**. The root `requirements.txt` includes runtime dependencies. [Streamlit deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)
 2. Enter these TOML settings in **Secrets** and save. [Streamlit secrets guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management)

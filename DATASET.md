@@ -4,10 +4,10 @@
 |---|---|
 | Original dataset | Bank Transaction Fraud Detection Dataset |
 | Publisher | Nafiul Islam (`nafiulislam490`) |
-| Original source | [Kaggle dataset](https://www.kaggle.com/datasets/nafiulislam490/bank-transaction-fraud-detection-dataset?resource=download) |
+| Original source | `https://www.kaggle.com/datasets/nafiulislam490/bank-transaction-fraud-detection-dataset?resource=download` |
 | Dedication | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) |
 
-The project owner confirmed the original Kaggle URL and verified the CC0 dedication. A [public snapshot of Kaggle’s dataset metadata](https://github.com/zzfcharlie/kaggle-fetch/blob/master/out_fraud_50/datasets/nafiulislam490__bank-transaction-fraud-detection-dataset.md) independently lists the same publisher, source, schema and CC0 designation. The direct metadata API was unavailable during this audit. The local CSV differs in byte size from the catalogue entry, so its provenance is owner-confirmed and it was not asserted to be byte-identical to Kaggle’s download.
+The project owner confirmed the original Kaggle URL and verified the CC0 dedication. A [public snapshot of Kaggle’s dataset metadata](https://github.com/zzfcharlie/kaggle-fetch/blob/master/out_fraud_50/datasets/nafiulislam490__bank-transaction-fraud-detection-dataset.md) independently lists the same publisher, source, schema and CC0 designation. The original page and direct metadata API returned HTTP 404 during verification. The local CSV differs in byte size from the catalogue entry, so provenance relies on the owner’s confirmation.
 
 ## Usage and preprocessing
 
