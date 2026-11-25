@@ -1,0 +1,1007 @@
+{
+  "rows": 1000000,
+  "columns": 26,
+  "fraud": 55255,
+  "fraud_rate": 0.055255,
+  "schema": {
+    "transaction_id": "str",
+    "customer_id": "str",
+    "transaction_date": "str",
+    "transaction_time": "str",
+    "hour_of_day": "int64",
+    "is_weekend": "int64",
+    "is_night_transaction": "int64",
+    "country": "str",
+    "city": "str",
+    "merchant_category": "str",
+    "payment_method": "str",
+    "device_type": "str",
+    "customer_age": "int64",
+    "credit_score": "int64",
+    "account_age_years": "float64",
+    "account_balance": "float64",
+    "transaction_amount": "float64",
+    "num_prev_transactions": "int64",
+    "transaction_freq_monthly": "int64",
+    "distance_from_home_km": "float64",
+    "time_since_last_txn_hrs": "float64",
+    "is_international": "int64",
+    "failed_attempts": "int64",
+    "pin_changed_recently": "int64",
+    "is_fraud": "int64",
+    "fraud_type": "str"
+  },
+  "missing": {
+    "transaction_id": 0,
+    "customer_id": 0,
+    "transaction_date": 0,
+    "transaction_time": 0,
+    "hour_of_day": 0,
+    "is_weekend": 0,
+    "is_night_transaction": 0,
+    "country": 0,
+    "city": 0,
+    "merchant_category": 0,
+    "payment_method": 0,
+    "device_type": 0,
+    "customer_age": 0,
+    "credit_score": 0,
+    "account_age_years": 0,
+    "account_balance": 0,
+    "transaction_amount": 0,
+    "num_prev_transactions": 0,
+    "transaction_freq_monthly": 0,
+    "distance_from_home_km": 0,
+    "time_since_last_txn_hrs": 0,
+    "is_international": 0,
+    "failed_attempts": 0,
+    "pin_changed_recently": 0,
+    "is_fraud": 0,
+    "fraud_type": 944745
+  },
+  "duplicate_rows": 0,
+  "duplicate_ids": 0,
+  "customers": 198662,
+  "dates": [
+    "2020-01-01 00:00:00",
+    "2024-12-30 23:58:00"
+  ],
+  "hour_mismatches": 0,
+  "label_leakage": {
+    "false": {
+      "0": 0,
+      "1": 55255
+    },
+    "true": {
+      "0": 944745,
+      "1": 0
+    }
+  },
+  "amount": {
+    "count": 1000000.0,
+    "mean": 204.72466542,
+    "std": 459.56780201034917,
+    "min": 1.0,
+    "25%": 33.4,
+    "50%": 73.12,
+    "75%": 181.45,
+    "max": 46129.6
+  },
+  "amount_outliers": {
+    "upper_fence": 403.525,
+    "groups": [
+      {
+        "high_amount": false,
+        "total": 881808,
+        "fraud": 48141,
+        "rate": 0.05459351695607207
+      },
+      {
+        "high_amount": true,
+        "total": 118192,
+        "fraud": 7114,
+        "rate": 0.06019019899824015
+      }
+    ]
+  },
+  "numerical_by_class": [
+    {
+      "is_fraud": 0,
+      "level_1": "hour_of_day",
+      "mean": 11.562358096629248,
+      "median": 12.0,
+      "std": 6.881101030376614,
+      "min": 0.0,
+      "max": 23.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "is_weekend",
+      "mean": 0.28589196026441,
+      "median": 0.0,
+      "std": 0.45183842623117515,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "is_night_transaction",
+      "mean": 0.36540865524559535,
+      "median": 0.0,
+      "std": 0.4815448217609849,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "customer_age",
+      "mean": 41.7813071252031,
+      "median": 42.0,
+      "std": 13.427355726931124,
+      "min": 18.0,
+      "max": 85.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "credit_score",
+      "mean": 679.1283785571768,
+      "median": 680.0,
+      "std": 78.72269507220503,
+      "min": 300.0,
+      "max": 850.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "account_age_years",
+      "mean": 4.987818511873574,
+      "median": 3.5,
+      "std": 4.926433384247492,
+      "min": 0.1,
+      "max": 30.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "account_balance",
+      "mean": 16582.70214652631,
+      "median": 8087.67,
+      "std": 28132.43942228978,
+      "min": 100.0,
+      "max": 500000.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "transaction_amount",
+      "mean": 203.35874312115968,
+      "median": 72.95,
+      "std": 453.9551262317575,
+      "min": 1.0,
+      "max": 46129.6
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "num_prev_transactions",
+      "mean": 149.99316005906357,
+      "median": 150.0,
+      "std": 12.239669179431276,
+      "min": 96.0,
+      "max": 213.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "transaction_freq_monthly",
+      "mean": 19.998874828657467,
+      "median": 20.0,
+      "std": 4.474417230687612,
+      "min": 2.0,
+      "max": 44.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "distance_from_home_km",
+      "mean": 20.011654467607663,
+      "median": 13.9,
+      "std": 20.01839973117854,
+      "min": 0.0,
+      "max": 292.1
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "time_since_last_txn_hrs",
+      "mean": 12.026800745174622,
+      "median": 8.35,
+      "std": 11.99768341802544,
+      "min": 0.0,
+      "max": 154.2
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "is_international",
+      "mean": 0.14311798421796357,
+      "median": 0.0,
+      "std": 0.35019331321321057,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "failed_attempts",
+      "mean": 0.3542945450888864,
+      "median": 0.0,
+      "std": 0.8788116975815813,
+      "min": 0.0,
+      "max": 5.0
+    },
+    {
+      "is_fraud": 0,
+      "level_1": "pin_changed_recently",
+      "mean": 0.07802211178677844,
+      "median": 0.0,
+      "std": 0.268206521175517,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "hour_of_day",
+      "mean": 10.379115012216088,
+      "median": 9.0,
+      "std": 7.528844760896069,
+      "min": 0.0,
+      "max": 23.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "is_weekend",
+      "mean": 0.2882454076554158,
+      "median": 0.0,
+      "std": 0.4529500034829433,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "is_night_transaction",
+      "mean": 0.5400235272825988,
+      "median": 1.0,
+      "std": 0.4984000530015161,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "customer_age",
+      "mean": 41.607040086869965,
+      "median": 41.0,
+      "std": 13.376234051823735,
+      "min": 18.0,
+      "max": 85.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "credit_score",
+      "mean": 677.3258709619039,
+      "median": 678.0,
+      "std": 80.60213661088558,
+      "min": 354.0,
+      "max": 850.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "account_age_years",
+      "mean": 4.989495973215093,
+      "median": 3.5,
+      "std": 4.917702344480939,
+      "min": 0.1,
+      "max": 30.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "account_balance",
+      "mean": 16791.77414677405,
+      "median": 8166.15,
+      "std": 28830.016458070513,
+      "min": 100.0,
+      "max": 500000.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "transaction_amount",
+      "mean": 228.07908153108318,
+      "median": 76.1,
+      "std": 546.165534145228,
+      "min": 1.0,
+      "max": 14767.61
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "num_prev_transactions",
+      "mean": 150.0508913220523,
+      "median": 150.0,
+      "std": 12.32461195729787,
+      "min": 100.0,
+      "max": 202.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "transaction_freq_monthly",
+      "mean": 20.0069676952312,
+      "median": 20.0,
+      "std": 4.467715209695227,
+      "min": 3.0,
+      "max": 40.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "distance_from_home_km",
+      "mean": 19.97971948239978,
+      "median": 13.9,
+      "std": 19.891992935661396,
+      "min": 0.0,
+      "max": 235.7
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "time_since_last_txn_hrs",
+      "mean": 11.558868880644287,
+      "median": 7.8,
+      "std": 12.029315917358907,
+      "min": 0.0,
+      "max": 137.69
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "is_international",
+      "mean": 0.2675594968781106,
+      "median": 0.0,
+      "std": 0.44269059087082024,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "failed_attempts",
+      "mean": 0.8208125961451452,
+      "median": 0.0,
+      "std": 1.3146852550752488,
+      "min": 0.0,
+      "max": 5.0
+    },
+    {
+      "is_fraud": 1,
+      "level_1": "pin_changed_recently",
+      "mean": 0.12176273640394535,
+      "median": 0.0,
+      "std": 0.3270145375833072,
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "categories": {
+    "country": [
+      {
+        "country": "Australia",
+        "total": 50034,
+        "fraud": 2759,
+        "rate": 0.05514250309789343
+      },
+      {
+        "country": "Brazil",
+        "total": 80351,
+        "fraud": 4552,
+        "rate": 0.056651441799106424
+      },
+      {
+        "country": "Canada",
+        "total": 69742,
+        "fraud": 3879,
+        "rate": 0.05561928249835107
+      },
+      {
+        "country": "France",
+        "total": 69867,
+        "fraud": 3785,
+        "rate": 0.05417435985515336
+      },
+      {
+        "country": "Germany",
+        "total": 79831,
+        "fraud": 4424,
+        "rate": 0.05541706855732735
+      },
+      {
+        "country": "India",
+        "total": 120206,
+        "fraud": 6600,
+        "rate": 0.05490574513751394
+      },
+      {
+        "country": "Japan",
+        "total": 70107,
+        "fraud": 3845,
+        "rate": 0.05484473733008116
+      },
+      {
+        "country": "Mexico",
+        "total": 60275,
+        "fraud": 3295,
+        "rate": 0.05466611364579013
+      },
+      {
+        "country": "UK",
+        "total": 99677,
+        "fraud": 5499,
+        "rate": 0.055168193264243506
+      },
+      {
+        "country": "USA",
+        "total": 299910,
+        "fraud": 16617,
+        "rate": 0.05540662198659598
+      }
+    ],
+    "city": [
+      {
+        "city": "Berlin",
+        "total": 50001,
+        "fraud": 2761,
+        "rate": 0.05521889562208756
+      },
+      {
+        "city": "Delhi",
+        "total": 50062,
+        "fraud": 2786,
+        "rate": 0.055650992768966484
+      },
+      {
+        "city": "Guadalajara",
+        "total": 50259,
+        "fraud": 2768,
+        "rate": 0.055074712986728745
+      },
+      {
+        "city": "London",
+        "total": 49613,
+        "fraud": 2749,
+        "rate": 0.05540886461209764
+      },
+      {
+        "city": "Los Angeles",
+        "total": 50062,
+        "fraud": 2812,
+        "rate": 0.056170348767528265
+      },
+      {
+        "city": "Lyon",
+        "total": 49881,
+        "fraud": 2680,
+        "rate": 0.05372787233616006
+      },
+      {
+        "city": "Manchester",
+        "total": 50147,
+        "fraud": 2722,
+        "rate": 0.05428041557820009
+      },
+      {
+        "city": "Melbourne",
+        "total": 50329,
+        "fraud": 2758,
+        "rate": 0.05479941981760019
+      },
+      {
+        "city": "Mexico City",
+        "total": 50005,
+        "fraud": 2771,
+        "rate": 0.055414458554144584
+      },
+      {
+        "city": "Mumbai",
+        "total": 50078,
+        "fraud": 2716,
+        "rate": 0.05423539278725189
+      },
+      {
+        "city": "Munich",
+        "total": 49653,
+        "fraud": 2777,
+        "rate": 0.055928141300626344
+      },
+      {
+        "city": "New York",
+        "total": 49639,
+        "fraud": 2783,
+        "rate": 0.05606478776768267
+      },
+      {
+        "city": "Osaka",
+        "total": 50047,
+        "fraud": 2776,
+        "rate": 0.055467860211401286
+      },
+      {
+        "city": "Paris",
+        "total": 49917,
+        "fraud": 2808,
+        "rate": 0.05625338061181561
+      },
+      {
+        "city": "Rio",
+        "total": 50365,
+        "fraud": 2826,
+        "rate": 0.05611039412290281
+      },
+      {
+        "city": "Sydney",
+        "total": 50206,
+        "fraud": 2745,
+        "rate": 0.05467474007090786
+      },
+      {
+        "city": "S\u00e3o Paulo",
+        "total": 50192,
+        "fraud": 2716,
+        "rate": 0.05411220911699076
+      },
+      {
+        "city": "Tokyo",
+        "total": 49687,
+        "fraud": 2764,
+        "rate": 0.0556282327369332
+      },
+      {
+        "city": "Toronto",
+        "total": 50029,
+        "fraud": 2773,
+        "rate": 0.05542785184592936
+      },
+      {
+        "city": "Vancouver",
+        "total": 49828,
+        "fraud": 2764,
+        "rate": 0.055470819619491046
+      }
+    ],
+    "merchant_category": [
+      {
+        "merchant_category": "ATM Withdrawal",
+        "total": 66389,
+        "fraud": 5802,
+        "rate": 0.08739399599331214
+      },
+      {
+        "merchant_category": "Clothing",
+        "total": 66792,
+        "fraud": 3183,
+        "rate": 0.04765540783327345
+      },
+      {
+        "merchant_category": "Crypto Exchange",
+        "total": 66308,
+        "fraud": 5737,
+        "rate": 0.08652048018338662
+      },
+      {
+        "merchant_category": "Education",
+        "total": 66816,
+        "fraud": 3195,
+        "rate": 0.04781788793103448
+      },
+      {
+        "merchant_category": "Electronics",
+        "total": 66866,
+        "fraud": 3230,
+        "rate": 0.04830556635659378
+      },
+      {
+        "merchant_category": "Entertainment",
+        "total": 67150,
+        "fraud": 3151,
+        "rate": 0.04692479523454952
+      },
+      {
+        "merchant_category": "Fuel",
+        "total": 66843,
+        "fraud": 3234,
+        "rate": 0.04838202953188816
+      },
+      {
+        "merchant_category": "Gaming",
+        "total": 66338,
+        "fraud": 3134,
+        "rate": 0.04724290753414333
+      },
+      {
+        "merchant_category": "Grocery",
+        "total": 66513,
+        "fraud": 3121,
+        "rate": 0.04692315787891089
+      },
+      {
+        "merchant_category": "Healthcare",
+        "total": 66613,
+        "fraud": 3143,
+        "rate": 0.0471829823007521
+      },
+      {
+        "merchant_category": "Jewelry",
+        "total": 66870,
+        "fraud": 5821,
+        "rate": 0.0870494990279647
+      },
+      {
+        "merchant_category": "Online Shopping",
+        "total": 66341,
+        "fraud": 3139,
+        "rate": 0.04731613934067922
+      },
+      {
+        "merchant_category": "Restaurant",
+        "total": 66628,
+        "fraud": 3137,
+        "rate": 0.04708230773848832
+      },
+      {
+        "merchant_category": "Travel",
+        "total": 66692,
+        "fraud": 3139,
+        "rate": 0.047067114496491334
+      },
+      {
+        "merchant_category": "Utilities",
+        "total": 66841,
+        "fraud": 3089,
+        "rate": 0.04621414999775587
+      }
+    ],
+    "payment_method": [
+      {
+        "payment_method": "Bank Transfer",
+        "total": 150029,
+        "fraud": 8261,
+        "rate": 0.05506268788034313
+      },
+      {
+        "payment_method": "Cheque",
+        "total": 29638,
+        "fraud": 1680,
+        "rate": 0.05668398677373642
+      },
+      {
+        "payment_method": "Credit Card",
+        "total": 349618,
+        "fraud": 19568,
+        "rate": 0.0559696583127871
+      },
+      {
+        "payment_method": "Crypto",
+        "total": 50158,
+        "fraud": 2758,
+        "rate": 0.0549862434706328
+      },
+      {
+        "payment_method": "Debit Card",
+        "total": 300860,
+        "fraud": 16420,
+        "rate": 0.054576879611779566
+      },
+      {
+        "payment_method": "Mobile Payment",
+        "total": 119697,
+        "fraud": 6568,
+        "rate": 0.0548718848425608
+      }
+    ],
+    "device_type": [
+      {
+        "device_type": "ATM",
+        "total": 100995,
+        "fraud": 5661,
+        "rate": 0.05605227981583247
+      },
+      {
+        "device_type": "Desktop",
+        "total": 249830,
+        "fraud": 13665,
+        "rate": 0.05469719409198255
+      },
+      {
+        "device_type": "Mobile",
+        "total": 449114,
+        "fraud": 25024,
+        "rate": 0.0557185926067769
+      },
+      {
+        "device_type": "POS Terminal",
+        "total": 99960,
+        "fraud": 5435,
+        "rate": 0.05437174869947979
+      },
+      {
+        "device_type": "Tablet",
+        "total": 100101,
+        "fraud": 5470,
+        "rate": 0.0546448087431694
+      }
+    ]
+  },
+  "hourly": [
+    {
+      "hour_of_day": 0,
+      "total": 41758,
+      "fraud": 3271,
+      "rate": 0.07833229560802721
+    },
+    {
+      "hour_of_day": 1,
+      "total": 41643,
+      "fraud": 3360,
+      "rate": 0.08068582955118507
+    },
+    {
+      "hour_of_day": 2,
+      "total": 41564,
+      "fraud": 3297,
+      "rate": 0.07932345298816283
+    },
+    {
+      "hour_of_day": 3,
+      "total": 41933,
+      "fraud": 3315,
+      "rate": 0.07905468246965397
+    },
+    {
+      "hour_of_day": 4,
+      "total": 41811,
+      "fraud": 3303,
+      "rate": 0.07899834971658176
+    },
+    {
+      "hour_of_day": 5,
+      "total": 41889,
+      "fraud": 3359,
+      "rate": 0.08018811621189334
+    },
+    {
+      "hour_of_day": 6,
+      "total": 41430,
+      "fraud": 3345,
+      "rate": 0.08073859522085446
+    },
+    {
+      "hour_of_day": 7,
+      "total": 41649,
+      "fraud": 1648,
+      "rate": 0.03956877716151648
+    },
+    {
+      "hour_of_day": 8,
+      "total": 41564,
+      "fraud": 1764,
+      "rate": 0.042440573573284575
+    },
+    {
+      "hour_of_day": 9,
+      "total": 41423,
+      "fraud": 1807,
+      "rate": 0.04362310793520508
+    },
+    {
+      "hour_of_day": 10,
+      "total": 41895,
+      "fraud": 1680,
+      "rate": 0.040100250626566414
+    },
+    {
+      "hour_of_day": 11,
+      "total": 41642,
+      "fraud": 1732,
+      "rate": 0.04159262283271697
+    },
+    {
+      "hour_of_day": 12,
+      "total": 41654,
+      "fraud": 1670,
+      "rate": 0.040092188025159646
+    },
+    {
+      "hour_of_day": 13,
+      "total": 41683,
+      "fraud": 1620,
+      "rate": 0.03886476501211525
+    },
+    {
+      "hour_of_day": 14,
+      "total": 41516,
+      "fraud": 1653,
+      "rate": 0.03981597456402351
+    },
+    {
+      "hour_of_day": 15,
+      "total": 41697,
+      "fraud": 1669,
+      "rate": 0.040026860445595606
+    },
+    {
+      "hour_of_day": 16,
+      "total": 41133,
+      "fraud": 1673,
+      "rate": 0.04067293900274718
+    },
+    {
+      "hour_of_day": 17,
+      "total": 41905,
+      "fraud": 1672,
+      "rate": 0.03989977329674263
+    },
+    {
+      "hour_of_day": 18,
+      "total": 41723,
+      "fraud": 1766,
+      "rate": 0.04232677420127987
+    },
+    {
+      "hour_of_day": 19,
+      "total": 41831,
+      "fraud": 1667,
+      "rate": 0.039850828333054436
+    },
+    {
+      "hour_of_day": 20,
+      "total": 41704,
+      "fraud": 1687,
+      "rate": 0.040451755227316324
+    },
+    {
+      "hour_of_day": 21,
+      "total": 41924,
+      "fraud": 1708,
+      "rate": 0.04074038736761759
+    },
+    {
+      "hour_of_day": 22,
+      "total": 41608,
+      "fraud": 3326,
+      "rate": 0.07993655066333398
+    },
+    {
+      "hour_of_day": 23,
+      "total": 41421,
+      "fraud": 3263,
+      "rate": 0.07877646604379421
+    }
+  ],
+  "interactions": {
+    "international_and_failures": [
+      {
+        "is_international": 0,
+        "repeat_failures": false,
+        "total": 764995,
+        "fraud": 28784,
+        "rate": 0.03762638971496546
+      },
+      {
+        "is_international": 0,
+        "repeat_failures": true,
+        "total": 85011,
+        "fraud": 11687,
+        "rate": 0.13747632659302914
+      },
+      {
+        "is_international": 1,
+        "repeat_failures": false,
+        "total": 135004,
+        "fraud": 11877,
+        "rate": 0.0879751711060413
+      },
+      {
+        "is_international": 1,
+        "repeat_failures": true,
+        "total": 14990,
+        "fraud": 2907,
+        "rate": 0.19392928619079386
+      }
+    ],
+    "failures_and_interval": [
+      {
+        "repeat_failures": false,
+        "short_interval": false,
+        "total": 863460,
+        "fraud": 37313,
+        "rate": 0.04321335093692817
+      },
+      {
+        "repeat_failures": false,
+        "short_interval": true,
+        "total": 36539,
+        "fraud": 3348,
+        "rate": 0.09162812337502395
+      },
+      {
+        "repeat_failures": true,
+        "short_interval": false,
+        "total": 95836,
+        "fraud": 13814,
+        "rate": 0.14414207604657958
+      },
+      {
+        "repeat_failures": true,
+        "short_interval": true,
+        "total": 4165,
+        "fraud": 780,
+        "rate": 0.1872749099639856
+      }
+    ],
+    "amount_and_risk": [
+      {
+        "high_amount": false,
+        "repeat_failures": false,
+        "is_international": 0,
+        "total": 674649,
+        "fraud": 24941,
+        "rate": 0.03696885343341501
+      },
+      {
+        "high_amount": false,
+        "repeat_failures": false,
+        "is_international": 1,
+        "total": 119041,
+        "fraud": 10378,
+        "rate": 0.08718004721062492
+      },
+      {
+        "high_amount": false,
+        "repeat_failures": true,
+        "is_international": 0,
+        "total": 74901,
+        "fraud": 10284,
+        "rate": 0.13730123763367647
+      },
+      {
+        "high_amount": false,
+        "repeat_failures": true,
+        "is_international": 1,
+        "total": 13217,
+        "fraud": 2538,
+        "rate": 0.1920254218052508
+      },
+      {
+        "high_amount": true,
+        "repeat_failures": false,
+        "is_international": 0,
+        "total": 90346,
+        "fraud": 3843,
+        "rate": 0.0425364709007593
+      },
+      {
+        "high_amount": true,
+        "repeat_failures": false,
+        "is_international": 1,
+        "total": 15963,
+        "fraud": 1499,
+        "rate": 0.09390465451356261
+      },
+      {
+        "high_amount": true,
+        "repeat_failures": true,
+        "is_international": 0,
+        "total": 10110,
+        "fraud": 1403,
+        "rate": 0.1387734915924827
+      },
+      {
+        "high_amount": true,
+        "repeat_failures": true,
+        "is_international": 1,
+        "total": 1773,
+        "fraud": 369,
+        "rate": 0.20812182741116753
+      }
+    ]
+  },
+  "statistical_comparisons": {
+    "amount_mann_whitney_p": 9.821953620497493e-15,
+    "amount_probability_of_superiority": 0.5097812392357964,
+    "international_chi_square": 6339.485500396894,
+    "international_chi_square_p": 0.0
+  }
+}

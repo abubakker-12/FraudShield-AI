@@ -1,0 +1,501 @@
+transaction_id,hour_of_day,is_international,failed_attempts,pin_changed_recently,time_since_last_txn_hrs,transaction_amount,merchant_category,payment_method,device_type
+DEMO-0001,17,0,0,0,5.16,7.86,Education,Crypto,Desktop
+DEMO-0002,23,0,2,0,4.36,51.6,Jewelry,Crypto,ATM
+DEMO-0003,15,0,1,0,6.92,128.93,Healthcare,Debit Card,Mobile
+DEMO-0004,20,0,0,0,2.55,40.14,Electronics,Bank Transfer,Desktop
+DEMO-0005,22,0,0,0,7.72,130.97,Healthcare,Credit Card,POS Terminal
+DEMO-0006,5,0,3,0,0.39,111.07,Online Shopping,Mobile Payment,Tablet
+DEMO-0007,23,0,0,0,0.89,56.34,ATM Withdrawal,Crypto,ATM
+DEMO-0008,23,1,0,0,6.9,65.91,Clothing,Credit Card,Desktop
+DEMO-0009,16,0,3,0,17.75,49.28,Entertainment,Credit Card,Desktop
+DEMO-0010,9,1,0,0,4.86,39.75,Grocery,Bank Transfer,Mobile
+DEMO-0011,20,0,0,0,1.36,34.51,Jewelry,Credit Card,Tablet
+DEMO-0012,22,0,0,0,13.87,554.5,Fuel,Debit Card,Tablet
+DEMO-0013,13,0,0,0,0.21,262.36,Entertainment,Credit Card,POS Terminal
+DEMO-0014,5,0,0,0,18.38,55.67,Entertainment,Mobile Payment,Desktop
+DEMO-0015,1,1,0,0,2.4,133.84,Utilities,Bank Transfer,Tablet
+DEMO-0016,7,0,0,0,12.83,121.59,Jewelry,Debit Card,Desktop
+DEMO-0017,6,0,0,0,1.15,278.69,Utilities,Cheque,ATM
+DEMO-0018,22,1,1,0,5.81,92.88,Entertainment,Crypto,POS Terminal
+DEMO-0019,13,0,0,0,20.88,130.99,Crypto Exchange,Credit Card,Desktop
+DEMO-0020,3,1,0,1,1.18,24.48,Gaming,Credit Card,Tablet
+DEMO-0021,12,0,0,0,1.45,40.75,ATM Withdrawal,Crypto,Mobile
+DEMO-0022,12,0,0,0,1.52,254.56,Restaurant,Cheque,ATM
+DEMO-0023,17,0,0,0,0.46,157.07,Online Shopping,Mobile Payment,POS Terminal
+DEMO-0024,8,0,0,0,0.61,8.08,Fuel,Credit Card,Desktop
+DEMO-0025,18,0,1,0,3.15,24.45,Online Shopping,Bank Transfer,Mobile
+DEMO-0026,20,0,4,0,5.45,63.29,Grocery,Credit Card,Tablet
+DEMO-0027,20,1,0,0,0.89,25.45,Fuel,Bank Transfer,ATM
+DEMO-0028,1,0,0,0,0.36,40.56,Entertainment,Cheque,POS Terminal
+DEMO-0029,5,0,3,0,7.09,64.51,Crypto Exchange,Crypto,Tablet
+DEMO-0030,2,1,0,0,3.46,32.4,Education,Crypto,Mobile
+DEMO-0031,19,0,0,0,5.37,36.15,Utilities,Bank Transfer,Desktop
+DEMO-0032,11,1,0,1,0.44,170.43,Gaming,Mobile Payment,POS Terminal
+DEMO-0033,3,0,0,0,3.52,15.71,ATM Withdrawal,Credit Card,Mobile
+DEMO-0034,18,0,0,0,0.57,580.26,Healthcare,Cheque,POS Terminal
+DEMO-0035,18,0,3,0,11.74,617.21,Entertainment,Crypto,Desktop
+DEMO-0036,3,0,0,1,7.79,23.07,Electronics,Crypto,Tablet
+DEMO-0037,6,0,0,0,0.93,19.48,Crypto Exchange,Cheque,Desktop
+DEMO-0038,14,0,0,0,1.29,37.29,Restaurant,Crypto,Tablet
+DEMO-0039,10,0,3,0,2.79,107.72,Healthcare,Cheque,POS Terminal
+DEMO-0040,9,0,0,0,3.33,310.43,Restaurant,Credit Card,Mobile
+DEMO-0041,17,0,0,0,2.93,108.37,Education,Bank Transfer,POS Terminal
+DEMO-0042,17,1,2,0,1.74,504.04,Healthcare,Credit Card,ATM
+DEMO-0043,18,1,2,0,5.04,496.84,Fuel,Mobile Payment,Tablet
+DEMO-0044,10,0,3,0,0.59,47.82,Electronics,Bank Transfer,Tablet
+DEMO-0045,18,0,1,0,12.86,151.08,Grocery,Crypto,Desktop
+DEMO-0046,6,0,0,0,0.93,177.15,Grocery,Mobile Payment,POS Terminal
+DEMO-0047,14,0,0,0,12.48,94.91,Online Shopping,Credit Card,ATM
+DEMO-0048,12,0,0,0,7.02,72.1,Grocery,Mobile Payment,ATM
+DEMO-0049,17,0,2,0,2.52,16.76,Entertainment,Bank Transfer,ATM
+DEMO-0050,19,0,0,0,7.99,14.25,Electronics,Crypto,Tablet
+DEMO-0051,7,0,0,0,3.22,30.1,Healthcare,Credit Card,Mobile
+DEMO-0052,7,0,4,0,0.12,272.04,Entertainment,Credit Card,Mobile
+DEMO-0053,4,0,3,0,0.48,185.03,Fuel,Debit Card,ATM
+DEMO-0054,17,0,0,0,1.42,9.79,Jewelry,Crypto,Desktop
+DEMO-0055,18,1,4,1,5.2,20.57,ATM Withdrawal,Debit Card,ATM
+DEMO-0056,16,0,3,0,2.22,37.72,Entertainment,Bank Transfer,Tablet
+DEMO-0057,9,0,0,1,7.48,985.11,Travel,Credit Card,Mobile
+DEMO-0058,9,0,5,0,5.58,194.29,Grocery,Credit Card,Desktop
+DEMO-0059,23,0,0,0,1.1,41.95,ATM Withdrawal,Crypto,ATM
+DEMO-0060,14,0,0,0,2.98,73.65,ATM Withdrawal,Credit Card,ATM
+DEMO-0061,4,1,0,0,0.81,43.78,Restaurant,Cheque,Tablet
+DEMO-0062,3,0,0,0,2.68,69.25,Online Shopping,Crypto,Mobile
+DEMO-0063,17,0,0,0,2.13,18.78,Electronics,Credit Card,POS Terminal
+DEMO-0064,19,0,2,0,2.39,91.88,Entertainment,Mobile Payment,Desktop
+DEMO-0065,19,0,1,1,1.78,32.9,Entertainment,Debit Card,Mobile
+DEMO-0066,0,0,0,0,0.37,32.36,Crypto Exchange,Debit Card,Mobile
+DEMO-0067,2,0,0,0,6.58,106.79,Travel,Debit Card,ATM
+DEMO-0068,6,0,1,0,13.79,30.62,Jewelry,Mobile Payment,POS Terminal
+DEMO-0069,19,0,0,1,5.3,122.65,Restaurant,Bank Transfer,ATM
+DEMO-0070,13,0,1,0,1.64,38.37,Grocery,Debit Card,ATM
+DEMO-0071,5,0,5,0,1.43,592.16,Electronics,Mobile Payment,POS Terminal
+DEMO-0072,3,1,1,0,5.02,32.82,Clothing,Crypto,Desktop
+DEMO-0073,5,0,0,1,4.78,4.57,Online Shopping,Crypto,POS Terminal
+DEMO-0074,3,1,0,0,1.63,14.43,Crypto Exchange,Cheque,Desktop
+DEMO-0075,15,0,0,1,1.79,86.17,Education,Cheque,POS Terminal
+DEMO-0076,18,0,2,0,2.1,33.0,Healthcare,Bank Transfer,Desktop
+DEMO-0077,18,1,4,0,3.42,25.28,Utilities,Crypto,ATM
+DEMO-0078,11,0,2,0,14.22,191.39,Jewelry,Mobile Payment,ATM
+DEMO-0079,21,0,0,0,5.48,25.97,Restaurant,Cheque,Tablet
+DEMO-0080,2,0,0,0,0.9,660.7,Gaming,Mobile Payment,Mobile
+DEMO-0081,5,0,0,0,0.16,53.25,Fuel,Debit Card,POS Terminal
+DEMO-0082,12,0,2,0,2.04,56.21,Utilities,Crypto,Desktop
+DEMO-0083,11,0,3,0,3.02,99.98,Crypto Exchange,Crypto,Tablet
+DEMO-0084,17,0,0,0,1.22,23.17,Jewelry,Crypto,ATM
+DEMO-0085,12,1,2,0,2.57,309.19,Electronics,Cheque,Desktop
+DEMO-0086,4,0,0,1,1.37,60.15,Jewelry,Debit Card,Mobile
+DEMO-0087,3,0,0,0,1.23,167.48,Electronics,Debit Card,Desktop
+DEMO-0088,20,0,0,0,3.32,81.57,Healthcare,Mobile Payment,POS Terminal
+DEMO-0089,6,0,0,0,0.55,210.38,Grocery,Bank Transfer,Tablet
+DEMO-0090,0,0,0,0,0.3,440.13,ATM Withdrawal,Debit Card,Mobile
+DEMO-0091,5,1,0,0,4.33,109.05,Clothing,Bank Transfer,Tablet
+DEMO-0092,10,0,0,0,7.26,183.86,Fuel,Debit Card,Mobile
+DEMO-0093,16,0,3,0,19.15,71.86,Travel,Cheque,POS Terminal
+DEMO-0094,13,0,0,0,2.66,490.77,Clothing,Crypto,Desktop
+DEMO-0095,20,0,0,0,0.8,659.79,Crypto Exchange,Credit Card,Tablet
+DEMO-0096,21,0,5,0,2.01,22.91,Education,Bank Transfer,Desktop
+DEMO-0097,21,0,2,0,18.57,30.58,Crypto Exchange,Credit Card,ATM
+DEMO-0098,2,1,0,0,1.36,72.35,Gaming,Bank Transfer,POS Terminal
+DEMO-0099,13,0,1,0,0.89,25.91,Jewelry,Credit Card,Mobile
+DEMO-0100,11,0,4,0,2.09,85.78,Crypto Exchange,Debit Card,Desktop
+DEMO-0101,7,0,0,0,0.43,118.88,Gaming,Cheque,ATM
+DEMO-0102,17,0,5,0,2.39,268.96,Restaurant,Bank Transfer,Tablet
+DEMO-0103,7,1,0,1,19.34,22.52,Grocery,Cheque,POS Terminal
+DEMO-0104,2,0,0,1,6.24,716.99,Healthcare,Cheque,Mobile
+DEMO-0105,0,0,2,0,8.2,719.48,Entertainment,Credit Card,POS Terminal
+DEMO-0106,2,0,1,0,8.75,134.32,Jewelry,Cheque,Desktop
+DEMO-0107,11,1,1,0,2.45,26.87,Gaming,Cheque,POS Terminal
+DEMO-0108,13,0,1,0,6.78,17.12,Grocery,Mobile Payment,ATM
+DEMO-0109,6,0,1,0,4.68,114.84,Crypto Exchange,Mobile Payment,POS Terminal
+DEMO-0110,11,0,0,0,2.59,61.16,ATM Withdrawal,Mobile Payment,ATM
+DEMO-0111,17,0,0,0,3.38,400.4,Electronics,Mobile Payment,Desktop
+DEMO-0112,11,0,0,1,10.78,23.23,Fuel,Bank Transfer,POS Terminal
+DEMO-0113,16,0,3,0,5.86,51.19,Healthcare,Credit Card,POS Terminal
+DEMO-0114,18,1,0,0,12.51,91.36,Utilities,Bank Transfer,Tablet
+DEMO-0115,4,0,3,0,5.48,244.32,Gaming,Debit Card,ATM
+DEMO-0116,16,1,0,0,0.43,86.95,Healthcare,Credit Card,Mobile
+DEMO-0117,5,0,3,0,14.24,30.36,Education,Debit Card,Mobile
+DEMO-0118,12,1,4,0,1.29,87.35,Entertainment,Credit Card,Mobile
+DEMO-0119,13,0,1,0,0.95,19.45,Crypto Exchange,Credit Card,Mobile
+DEMO-0120,14,0,2,0,0.13,104.27,Entertainment,Debit Card,ATM
+DEMO-0121,11,0,1,0,2.35,115.39,Restaurant,Bank Transfer,Desktop
+DEMO-0122,3,0,1,0,2.02,223.21,Utilities,Credit Card,ATM
+DEMO-0123,14,0,2,0,6.35,67.36,Online Shopping,Mobile Payment,ATM
+DEMO-0124,2,0,0,0,5.97,201.63,Utilities,Credit Card,Desktop
+DEMO-0125,12,1,0,0,2.53,363.79,Fuel,Debit Card,Desktop
+DEMO-0126,22,0,0,0,5.7,19.93,Utilities,Mobile Payment,Desktop
+DEMO-0127,10,0,1,0,2.28,29.87,Crypto Exchange,Debit Card,POS Terminal
+DEMO-0128,11,0,0,0,7.39,19.07,Utilities,Debit Card,Mobile
+DEMO-0129,4,0,0,0,4.82,38.65,Jewelry,Crypto,ATM
+DEMO-0130,14,0,0,0,4.11,8.82,Restaurant,Cheque,Mobile
+DEMO-0131,8,0,0,0,3.17,18.03,Jewelry,Cheque,ATM
+DEMO-0132,5,0,0,0,0.72,218.11,Jewelry,Credit Card,Mobile
+DEMO-0133,11,0,2,0,2.67,28.73,Jewelry,Credit Card,Mobile
+DEMO-0134,9,1,3,1,22.43,124.61,Healthcare,Credit Card,POS Terminal
+DEMO-0135,11,0,0,0,14.77,173.58,Jewelry,Mobile Payment,Desktop
+DEMO-0136,6,1,4,0,0.5,34.99,Grocery,Bank Transfer,Tablet
+DEMO-0137,17,0,0,0,7.5,16.01,Crypto Exchange,Cheque,POS Terminal
+DEMO-0138,5,0,0,0,4.08,80.26,ATM Withdrawal,Crypto,POS Terminal
+DEMO-0139,2,1,4,0,7.44,60.82,Gaming,Mobile Payment,POS Terminal
+DEMO-0140,0,0,0,0,3.54,86.1,Education,Debit Card,POS Terminal
+DEMO-0141,14,0,3,0,2.34,1289.94,Restaurant,Debit Card,Tablet
+DEMO-0142,20,0,1,0,1.77,11.08,Fuel,Cheque,Mobile
+DEMO-0143,12,0,0,0,15.76,40.4,Travel,Bank Transfer,Mobile
+DEMO-0144,21,0,5,0,1.69,67.43,Travel,Credit Card,Desktop
+DEMO-0145,14,0,0,1,11.01,552.17,Clothing,Credit Card,POS Terminal
+DEMO-0146,9,0,2,1,1.99,83.98,Online Shopping,Debit Card,Tablet
+DEMO-0147,0,1,0,0,6.25,134.67,Fuel,Crypto,ATM
+DEMO-0148,21,1,0,0,1.63,78.73,Entertainment,Crypto,POS Terminal
+DEMO-0149,21,0,2,0,5.37,16.56,Crypto Exchange,Bank Transfer,Mobile
+DEMO-0150,2,0,0,0,14.11,47.94,Education,Cheque,ATM
+DEMO-0151,17,0,0,0,1.7,111.36,Crypto Exchange,Crypto,Desktop
+DEMO-0152,10,0,2,0,1.47,63.1,Crypto Exchange,Mobile Payment,Desktop
+DEMO-0153,10,0,0,0,18.2,28.11,Restaurant,Mobile Payment,POS Terminal
+DEMO-0154,9,0,0,0,2.74,168.43,Education,Credit Card,Desktop
+DEMO-0155,0,0,1,0,6.52,1865.72,Travel,Debit Card,Mobile
+DEMO-0156,10,0,1,0,5.13,14.36,Travel,Debit Card,POS Terminal
+DEMO-0157,10,0,4,0,0.64,25.47,Online Shopping,Bank Transfer,Desktop
+DEMO-0158,21,1,0,0,0.98,32.5,Restaurant,Mobile Payment,Tablet
+DEMO-0159,12,1,0,0,2.52,18.82,Travel,Mobile Payment,ATM
+DEMO-0160,9,0,2,0,0.46,961.68,Restaurant,Bank Transfer,Desktop
+DEMO-0161,21,0,2,0,2.58,273.78,Online Shopping,Cheque,ATM
+DEMO-0162,2,0,0,0,0.88,213.19,Online Shopping,Credit Card,Tablet
+DEMO-0163,2,0,0,0,4.02,88.48,Crypto Exchange,Crypto,POS Terminal
+DEMO-0164,14,0,0,0,1.04,36.59,Education,Debit Card,Desktop
+DEMO-0165,0,0,5,0,2.5,226.24,Entertainment,Debit Card,POS Terminal
+DEMO-0166,14,0,3,1,9.31,108.77,Grocery,Mobile Payment,Tablet
+DEMO-0167,8,0,2,0,6.72,71.47,Online Shopping,Crypto,ATM
+DEMO-0168,9,0,1,1,8.77,295.57,Fuel,Bank Transfer,Desktop
+DEMO-0169,4,0,2,0,0.01,510.54,Crypto Exchange,Crypto,ATM
+DEMO-0170,19,0,2,0,1.53,24.54,Travel,Cheque,Mobile
+DEMO-0171,0,0,0,0,13.28,628.3,Crypto Exchange,Credit Card,POS Terminal
+DEMO-0172,11,0,0,0,1.31,5.96,Restaurant,Cheque,Desktop
+DEMO-0173,2,1,0,0,0.76,228.67,Online Shopping,Mobile Payment,Tablet
+DEMO-0174,9,0,0,0,6.15,488.25,Online Shopping,Cheque,Mobile
+DEMO-0175,8,1,1,0,0.3,110.3,Online Shopping,Credit Card,Desktop
+DEMO-0176,21,0,0,0,1.13,178.49,Fuel,Bank Transfer,ATM
+DEMO-0177,18,0,0,0,0.23,639.99,Fuel,Cheque,Mobile
+DEMO-0178,9,1,2,0,7.67,10.88,Clothing,Bank Transfer,Desktop
+DEMO-0179,2,0,1,0,2.12,548.5,ATM Withdrawal,Credit Card,POS Terminal
+DEMO-0180,18,1,0,0,1.89,138.12,Entertainment,Bank Transfer,POS Terminal
+DEMO-0181,2,0,1,0,5.5,281.27,Electronics,Bank Transfer,Desktop
+DEMO-0182,14,0,0,0,12.99,23.18,Electronics,Mobile Payment,POS Terminal
+DEMO-0183,23,0,1,0,2.98,67.99,Fuel,Mobile Payment,Desktop
+DEMO-0184,12,1,2,0,8.79,238.01,Jewelry,Credit Card,Tablet
+DEMO-0185,18,0,0,0,11.07,197.25,Jewelry,Credit Card,Tablet
+DEMO-0186,23,0,2,0,0.15,25.44,Grocery,Mobile Payment,Mobile
+DEMO-0187,16,1,0,0,4.45,155.12,Grocery,Mobile Payment,Mobile
+DEMO-0188,22,1,1,0,1.71,83.66,Electronics,Mobile Payment,Mobile
+DEMO-0189,17,0,0,0,0.48,162.7,Healthcare,Crypto,POS Terminal
+DEMO-0190,0,0,0,0,3.17,926.37,Fuel,Cheque,Desktop
+DEMO-0191,1,0,0,0,2.38,740.95,Utilities,Bank Transfer,ATM
+DEMO-0192,14,0,1,0,3.48,165.0,Crypto Exchange,Credit Card,Mobile
+DEMO-0193,7,0,1,0,5.32,17.82,Crypto Exchange,Mobile Payment,Desktop
+DEMO-0194,3,0,0,0,0.58,31.09,Jewelry,Cheque,POS Terminal
+DEMO-0195,22,0,0,0,4.03,541.16,Fuel,Cheque,ATM
+DEMO-0196,22,1,0,1,0.52,89.33,Online Shopping,Bank Transfer,POS Terminal
+DEMO-0197,13,0,0,0,0.58,44.12,Healthcare,Cheque,ATM
+DEMO-0198,8,1,1,0,7.23,96.51,Entertainment,Cheque,POS Terminal
+DEMO-0199,3,0,0,1,2.02,177.04,ATM Withdrawal,Mobile Payment,ATM
+DEMO-0200,19,0,3,1,0.39,9.58,Jewelry,Bank Transfer,Tablet
+DEMO-0201,6,0,1,0,9.08,1079.01,Travel,Debit Card,Tablet
+DEMO-0202,9,0,3,0,9.79,136.18,Fuel,Mobile Payment,POS Terminal
+DEMO-0203,1,0,0,1,0.45,146.53,Utilities,Debit Card,ATM
+DEMO-0204,8,1,0,0,0.86,695.26,Travel,Bank Transfer,ATM
+DEMO-0205,14,0,0,0,5.75,82.08,ATM Withdrawal,Bank Transfer,POS Terminal
+DEMO-0206,19,0,0,0,0.54,25.2,Entertainment,Cheque,POS Terminal
+DEMO-0207,22,0,2,0,2.12,99.66,Electronics,Debit Card,ATM
+DEMO-0208,7,0,0,0,1.61,375.25,Online Shopping,Credit Card,ATM
+DEMO-0209,14,0,0,0,0.34,50.21,Travel,Credit Card,Tablet
+DEMO-0210,12,0,0,0,0.79,42.7,Crypto Exchange,Crypto,Tablet
+DEMO-0211,18,0,2,0,1.49,48.0,Restaurant,Crypto,Tablet
+DEMO-0212,21,0,0,0,0.16,452.94,Utilities,Cheque,Mobile
+DEMO-0213,14,1,1,0,14.59,308.61,Utilities,Crypto,POS Terminal
+DEMO-0214,23,0,0,0,0.13,28.27,Fuel,Crypto,Tablet
+DEMO-0215,18,0,0,0,0.59,79.26,ATM Withdrawal,Cheque,Desktop
+DEMO-0216,14,1,0,0,0.1,26.81,Entertainment,Mobile Payment,ATM
+DEMO-0217,10,0,0,0,4.66,180.0,Healthcare,Crypto,ATM
+DEMO-0218,21,1,1,0,0.69,205.46,Jewelry,Crypto,Mobile
+DEMO-0219,13,1,0,0,2.37,349.61,Grocery,Credit Card,Mobile
+DEMO-0220,20,1,0,0,2.56,99.93,Online Shopping,Crypto,POS Terminal
+DEMO-0221,17,0,5,0,15.54,101.87,Online Shopping,Bank Transfer,Tablet
+DEMO-0222,3,1,0,0,6.98,196.08,Gaming,Cheque,POS Terminal
+DEMO-0223,9,1,0,0,1.11,395.8,Electronics,Cheque,POS Terminal
+DEMO-0224,1,0,0,1,4.59,51.21,Travel,Crypto,Desktop
+DEMO-0225,12,0,1,0,5.65,41.27,Entertainment,Crypto,Mobile
+DEMO-0226,12,0,0,0,5.45,170.75,Fuel,Crypto,POS Terminal
+DEMO-0227,2,0,0,0,11.45,113.85,Crypto Exchange,Cheque,ATM
+DEMO-0228,16,0,0,0,2.81,312.02,Travel,Mobile Payment,Tablet
+DEMO-0229,13,0,0,0,10.59,83.37,Entertainment,Debit Card,Desktop
+DEMO-0230,20,1,0,0,11.63,498.44,Travel,Bank Transfer,ATM
+DEMO-0231,0,0,1,0,6.69,1260.69,Restaurant,Bank Transfer,Mobile
+DEMO-0232,2,0,0,0,8.67,137.93,Gaming,Credit Card,POS Terminal
+DEMO-0233,9,1,0,0,1.1,197.53,Clothing,Credit Card,Mobile
+DEMO-0234,5,0,2,0,5.44,408.33,Education,Debit Card,Mobile
+DEMO-0235,12,1,0,0,4.5,110.19,Healthcare,Debit Card,Tablet
+DEMO-0236,15,0,3,0,4.49,8.06,Entertainment,Debit Card,Tablet
+DEMO-0237,12,0,1,0,12.92,589.45,Entertainment,Bank Transfer,Mobile
+DEMO-0238,17,0,2,0,9.45,30.74,ATM Withdrawal,Credit Card,Mobile
+DEMO-0239,1,0,1,0,1.42,11.58,Healthcare,Debit Card,ATM
+DEMO-0240,11,0,5,0,15.6,145.67,Entertainment,Crypto,POS Terminal
+DEMO-0241,21,0,5,1,2.0,46.73,Grocery,Credit Card,ATM
+DEMO-0242,2,0,3,0,11.67,69.89,Clothing,Mobile Payment,Desktop
+DEMO-0243,21,0,0,0,0.1,66.29,Restaurant,Cheque,POS Terminal
+DEMO-0244,1,0,4,0,2.82,96.76,Crypto Exchange,Mobile Payment,Tablet
+DEMO-0245,17,1,4,0,3.91,204.35,Entertainment,Bank Transfer,ATM
+DEMO-0246,22,0,1,0,0.4,7.47,Jewelry,Bank Transfer,Mobile
+DEMO-0247,6,1,0,1,5.22,8.68,Entertainment,Crypto,ATM
+DEMO-0248,14,0,0,0,1.58,806.55,Utilities,Credit Card,Mobile
+DEMO-0249,21,1,3,0,1.44,25.8,Crypto Exchange,Credit Card,POS Terminal
+DEMO-0250,3,0,3,0,0.47,576.64,Restaurant,Mobile Payment,ATM
+DEMO-0251,3,0,0,0,2.01,445.48,Electronics,Crypto,Tablet
+DEMO-0252,16,0,1,0,3.94,323.98,Travel,Crypto,POS Terminal
+DEMO-0253,17,0,0,0,6.79,38.24,Utilities,Debit Card,Tablet
+DEMO-0254,3,1,0,0,1.39,109.15,Utilities,Mobile Payment,Tablet
+DEMO-0255,20,0,0,0,20.6,68.61,Jewelry,Cheque,Tablet
+DEMO-0256,4,0,0,0,6.37,235.51,Online Shopping,Bank Transfer,POS Terminal
+DEMO-0257,10,0,1,0,0.15,9.38,Electronics,Crypto,Desktop
+DEMO-0258,13,0,0,1,11.21,95.58,Gaming,Bank Transfer,Desktop
+DEMO-0259,7,0,1,0,2.45,297.19,Clothing,Debit Card,Tablet
+DEMO-0260,7,0,0,0,7.67,55.21,Grocery,Cheque,ATM
+DEMO-0261,14,0,0,0,3.53,42.22,Jewelry,Debit Card,Tablet
+DEMO-0262,8,1,0,0,9.43,192.7,Jewelry,Mobile Payment,Mobile
+DEMO-0263,6,1,4,0,11.0,44.36,ATM Withdrawal,Debit Card,Mobile
+DEMO-0264,17,0,0,0,4.64,57.96,Jewelry,Credit Card,Desktop
+DEMO-0265,3,0,0,0,0.09,63.29,Education,Credit Card,POS Terminal
+DEMO-0266,10,0,0,0,1.39,277.48,Utilities,Cheque,Desktop
+DEMO-0267,9,0,5,0,0.61,440.37,Fuel,Crypto,Tablet
+DEMO-0268,17,0,0,0,0.45,148.56,Clothing,Bank Transfer,Desktop
+DEMO-0269,10,0,3,0,6.71,62.34,Restaurant,Cheque,Tablet
+DEMO-0270,15,0,5,0,3.71,13.33,Restaurant,Debit Card,Desktop
+DEMO-0271,23,0,0,0,4.05,186.51,Online Shopping,Cheque,Tablet
+DEMO-0272,4,0,0,0,7.1,15.97,Fuel,Crypto,POS Terminal
+DEMO-0273,8,1,0,0,3.99,171.14,Crypto Exchange,Credit Card,Desktop
+DEMO-0274,11,1,1,0,7.3,24.85,Jewelry,Credit Card,Tablet
+DEMO-0275,12,1,0,0,2.32,38.07,Restaurant,Cheque,ATM
+DEMO-0276,15,0,0,0,0.63,50.5,Online Shopping,Crypto,Mobile
+DEMO-0277,1,1,0,0,9.29,452.15,Crypto Exchange,Bank Transfer,ATM
+DEMO-0278,14,0,2,0,7.81,26.24,Travel,Mobile Payment,POS Terminal
+DEMO-0279,21,0,1,0,0.19,30.4,Entertainment,Cheque,Tablet
+DEMO-0280,11,0,1,0,2.85,23.15,Grocery,Mobile Payment,Mobile
+DEMO-0281,22,1,0,0,26.37,23.67,Healthcare,Mobile Payment,POS Terminal
+DEMO-0282,23,0,0,0,0.81,105.39,Gaming,Credit Card,ATM
+DEMO-0283,9,0,3,0,0.83,21.93,Entertainment,Mobile Payment,Mobile
+DEMO-0284,20,1,1,0,1.57,155.87,Gaming,Debit Card,POS Terminal
+DEMO-0285,20,1,0,0,6.38,100.66,Jewelry,Debit Card,Mobile
+DEMO-0286,11,1,1,0,5.99,241.62,Clothing,Mobile Payment,Mobile
+DEMO-0287,16,0,0,0,0.19,143.63,Restaurant,Cheque,Tablet
+DEMO-0288,21,0,2,0,0.86,47.36,Crypto Exchange,Bank Transfer,ATM
+DEMO-0289,5,0,0,0,6.92,126.56,Online Shopping,Credit Card,Mobile
+DEMO-0290,22,0,0,0,7.07,91.7,Electronics,Credit Card,Mobile
+DEMO-0291,5,0,0,0,1.09,59.94,Electronics,Debit Card,POS Terminal
+DEMO-0292,20,0,0,0,0.54,52.62,Electronics,Cheque,Mobile
+DEMO-0293,9,1,0,0,0.41,7.81,Online Shopping,Mobile Payment,Tablet
+DEMO-0294,21,0,0,0,0.41,35.25,Gaming,Credit Card,Tablet
+DEMO-0295,5,1,2,0,0.49,237.0,Fuel,Cheque,Tablet
+DEMO-0296,2,0,0,1,9.68,157.6,Grocery,Cheque,Desktop
+DEMO-0297,14,0,0,0,5.19,337.32,Education,Debit Card,Tablet
+DEMO-0298,11,0,3,0,16.05,137.06,Gaming,Debit Card,Tablet
+DEMO-0299,7,1,0,1,5.34,9.0,Grocery,Bank Transfer,POS Terminal
+DEMO-0300,20,0,2,0,3.17,249.36,ATM Withdrawal,Credit Card,Mobile
+DEMO-0301,4,0,3,0,0.1,40.19,Entertainment,Mobile Payment,Mobile
+DEMO-0302,14,0,5,1,0.57,48.25,Fuel,Debit Card,ATM
+DEMO-0303,23,0,4,0,15.92,40.12,Crypto Exchange,Credit Card,Mobile
+DEMO-0304,4,0,4,0,0.77,165.7,Restaurant,Cheque,Tablet
+DEMO-0305,0,0,0,1,1.33,81.19,Electronics,Credit Card,POS Terminal
+DEMO-0306,13,0,0,0,2.37,23.06,Jewelry,Mobile Payment,Mobile
+DEMO-0307,10,0,4,0,16.02,17.53,Electronics,Credit Card,Mobile
+DEMO-0308,21,0,0,1,11.02,55.9,Jewelry,Credit Card,Tablet
+DEMO-0309,16,1,0,0,4.92,10.48,Online Shopping,Bank Transfer,Mobile
+DEMO-0310,23,0,0,0,1.3,160.14,Grocery,Cheque,Mobile
+DEMO-0311,18,0,3,0,7.19,235.4,Utilities,Mobile Payment,Mobile
+DEMO-0312,2,1,0,0,6.36,24.79,Fuel,Cheque,ATM
+DEMO-0313,9,0,0,0,0.65,414.22,ATM Withdrawal,Crypto,POS Terminal
+DEMO-0314,12,0,0,0,2.38,129.08,Online Shopping,Credit Card,Mobile
+DEMO-0315,7,0,2,0,1.27,13.1,Fuel,Debit Card,Desktop
+DEMO-0316,7,0,2,1,8.77,67.86,Utilities,Credit Card,Mobile
+DEMO-0317,14,0,0,0,3.79,140.82,Entertainment,Bank Transfer,POS Terminal
+DEMO-0318,6,0,0,1,2.42,17.79,ATM Withdrawal,Debit Card,Mobile
+DEMO-0319,8,0,0,0,2.17,13.88,Crypto Exchange,Cheque,Tablet
+DEMO-0320,14,1,0,0,2.46,110.23,Clothing,Bank Transfer,POS Terminal
+DEMO-0321,12,0,0,1,11.73,74.83,Utilities,Crypto,POS Terminal
+DEMO-0322,3,0,0,0,2.1,73.74,Jewelry,Bank Transfer,Tablet
+DEMO-0323,3,0,0,0,3.25,141.39,Online Shopping,Mobile Payment,ATM
+DEMO-0324,21,0,0,0,11.79,56.8,Entertainment,Credit Card,ATM
+DEMO-0325,18,0,0,1,6.55,70.04,Clothing,Cheque,Mobile
+DEMO-0326,18,1,0,0,8.99,133.73,Utilities,Crypto,Desktop
+DEMO-0327,21,0,0,0,5.99,21.56,Travel,Bank Transfer,POS Terminal
+DEMO-0328,8,0,0,0,13.22,4421.39,Crypto Exchange,Credit Card,POS Terminal
+DEMO-0329,0,1,0,0,3.73,83.52,Restaurant,Bank Transfer,ATM
+DEMO-0330,3,1,0,0,6.11,47.21,Electronics,Bank Transfer,Mobile
+DEMO-0331,10,0,2,0,11.34,29.13,Utilities,Crypto,ATM
+DEMO-0332,6,1,3,1,0.44,438.17,Gaming,Mobile Payment,ATM
+DEMO-0333,12,0,3,0,0.54,394.32,Healthcare,Mobile Payment,Tablet
+DEMO-0334,14,1,0,0,12.17,98.31,Entertainment,Crypto,ATM
+DEMO-0335,8,0,0,0,2.09,663.81,Clothing,Crypto,Mobile
+DEMO-0336,18,0,0,0,0.03,413.43,Clothing,Credit Card,ATM
+DEMO-0337,5,1,0,0,1.61,28.23,Online Shopping,Bank Transfer,ATM
+DEMO-0338,18,1,0,0,0.03,17.75,Healthcare,Crypto,Tablet
+DEMO-0339,11,0,4,0,0.71,72.12,Travel,Crypto,POS Terminal
+DEMO-0340,17,0,0,0,2.79,185.83,Electronics,Debit Card,Mobile
+DEMO-0341,4,0,0,0,8.58,50.42,Jewelry,Bank Transfer,ATM
+DEMO-0342,14,0,0,0,6.91,98.84,Education,Credit Card,Mobile
+DEMO-0343,3,0,0,0,9.92,16.53,ATM Withdrawal,Mobile Payment,Tablet
+DEMO-0344,22,0,3,0,0.86,178.98,Education,Cheque,POS Terminal
+DEMO-0345,14,0,5,0,6.88,14.37,Education,Bank Transfer,Tablet
+DEMO-0346,6,0,1,0,1.17,28.01,Entertainment,Cheque,ATM
+DEMO-0347,7,0,0,1,2.01,99.06,Jewelry,Bank Transfer,Desktop
+DEMO-0348,4,1,4,0,5.15,616.71,Online Shopping,Credit Card,ATM
+DEMO-0349,21,0,2,0,5.82,107.44,Utilities,Credit Card,POS Terminal
+DEMO-0350,19,1,3,0,2.0,260.71,Jewelry,Credit Card,Mobile
+DEMO-0351,6,0,0,0,1.1,84.23,Grocery,Crypto,Mobile
+DEMO-0352,4,1,3,0,6.15,40.34,Clothing,Crypto,Tablet
+DEMO-0353,7,0,0,0,8.86,236.98,ATM Withdrawal,Credit Card,Desktop
+DEMO-0354,16,1,5,0,2.05,70.22,Travel,Bank Transfer,Mobile
+DEMO-0355,20,1,4,0,7.64,4.03,Healthcare,Bank Transfer,ATM
+DEMO-0356,13,0,1,0,8.96,6.95,Online Shopping,Crypto,POS Terminal
+DEMO-0357,3,1,4,1,7.65,74.84,Grocery,Debit Card,POS Terminal
+DEMO-0358,9,0,0,0,6.42,15.78,Utilities,Cheque,ATM
+DEMO-0359,6,0,3,0,3.08,44.22,Restaurant,Bank Transfer,ATM
+DEMO-0360,9,0,0,0,5.91,144.5,ATM Withdrawal,Debit Card,Mobile
+DEMO-0361,15,0,0,0,2.3,4.56,Online Shopping,Crypto,Mobile
+DEMO-0362,13,0,0,0,13.17,38.46,Online Shopping,Mobile Payment,Desktop
+DEMO-0363,15,0,0,0,2.35,46.46,Crypto Exchange,Cheque,Tablet
+DEMO-0364,21,0,0,0,0.14,30.55,Utilities,Bank Transfer,Mobile
+DEMO-0365,4,0,0,0,3.64,43.28,Travel,Credit Card,Tablet
+DEMO-0366,4,0,0,0,2.72,51.25,Restaurant,Mobile Payment,Tablet
+DEMO-0367,1,1,1,0,17.89,100.57,Utilities,Bank Transfer,Mobile
+DEMO-0368,12,0,1,0,7.3,478.36,Crypto Exchange,Bank Transfer,Tablet
+DEMO-0369,15,1,3,0,6.95,35.32,Restaurant,Bank Transfer,Tablet
+DEMO-0370,5,1,0,0,3.9,81.19,Clothing,Debit Card,POS Terminal
+DEMO-0371,8,0,3,0,2.11,186.81,Utilities,Mobile Payment,Desktop
+DEMO-0372,2,1,0,0,3.32,2.75,Travel,Credit Card,POS Terminal
+DEMO-0373,5,1,1,1,3.14,106.18,Entertainment,Bank Transfer,POS Terminal
+DEMO-0374,0,1,1,0,7.45,97.67,Education,Credit Card,Desktop
+DEMO-0375,14,0,0,0,2.35,42.63,Online Shopping,Mobile Payment,Tablet
+DEMO-0376,2,0,0,0,4.42,377.01,Travel,Crypto,Desktop
+DEMO-0377,15,0,0,0,4.51,29.46,ATM Withdrawal,Cheque,Mobile
+DEMO-0378,7,0,0,0,10.33,32.35,Healthcare,Mobile Payment,Desktop
+DEMO-0379,1,0,1,0,4.31,49.26,Utilities,Mobile Payment,ATM
+DEMO-0380,17,0,0,0,3.02,34.24,Utilities,Crypto,ATM
+DEMO-0381,7,0,0,0,1.27,69.74,Entertainment,Crypto,Desktop
+DEMO-0382,2,0,0,1,19.25,103.24,Crypto Exchange,Debit Card,POS Terminal
+DEMO-0383,16,0,0,0,9.02,125.46,Entertainment,Cheque,Mobile
+DEMO-0384,19,0,0,1,0.01,415.18,Clothing,Debit Card,POS Terminal
+DEMO-0385,0,0,1,0,7.05,72.06,Clothing,Bank Transfer,Mobile
+DEMO-0386,2,0,1,0,1.81,32.92,Utilities,Credit Card,POS Terminal
+DEMO-0387,12,0,1,0,0.65,62.4,Gaming,Crypto,ATM
+DEMO-0388,6,0,1,0,0.32,226.88,Online Shopping,Mobile Payment,ATM
+DEMO-0389,15,0,0,0,8.37,100.6,Restaurant,Crypto,Tablet
+DEMO-0390,9,0,0,0,3.28,169.33,Gaming,Bank Transfer,Desktop
+DEMO-0391,20,0,0,0,6.19,68.1,Crypto Exchange,Cheque,Desktop
+DEMO-0392,19,0,1,0,8.06,9.66,Electronics,Bank Transfer,Mobile
+DEMO-0393,8,0,0,0,0.41,56.29,ATM Withdrawal,Credit Card,Desktop
+DEMO-0394,21,0,0,0,2.28,12.68,Healthcare,Cheque,Desktop
+DEMO-0395,4,0,2,0,7.7,231.13,Crypto Exchange,Mobile Payment,POS Terminal
+DEMO-0396,18,0,4,0,6.58,22.77,Online Shopping,Debit Card,ATM
+DEMO-0397,4,0,0,1,0.6,25.17,Jewelry,Cheque,ATM
+DEMO-0398,0,1,0,0,0.46,123.04,Entertainment,Credit Card,ATM
+DEMO-0399,3,1,3,0,4.03,31.93,Fuel,Bank Transfer,Tablet
+DEMO-0400,5,0,1,0,10.75,54.14,Restaurant,Credit Card,ATM
+DEMO-0401,0,0,0,0,1.44,146.19,Fuel,Bank Transfer,Mobile
+DEMO-0402,22,0,2,0,1.47,163.13,Restaurant,Mobile Payment,Mobile
+DEMO-0403,5,0,3,0,7.91,121.16,Jewelry,Credit Card,Mobile
+DEMO-0404,2,0,0,0,3.76,17.61,Jewelry,Cheque,POS Terminal
+DEMO-0405,22,1,5,0,1.62,28.82,Entertainment,Mobile Payment,Desktop
+DEMO-0406,2,1,0,0,3.7,145.94,Education,Debit Card,POS Terminal
+DEMO-0407,9,0,4,1,1.31,11.43,Clothing,Bank Transfer,Mobile
+DEMO-0408,9,0,0,0,10.49,22.14,Clothing,Debit Card,Desktop
+DEMO-0409,0,0,1,1,3.25,110.19,Grocery,Mobile Payment,ATM
+DEMO-0410,3,0,0,0,15.39,48.14,Education,Debit Card,ATM
+DEMO-0411,1,1,2,0,5.63,37.22,Travel,Cheque,Desktop
+DEMO-0412,1,1,0,0,8.41,112.25,Online Shopping,Credit Card,Mobile
+DEMO-0413,18,0,1,0,0.69,264.3,Clothing,Credit Card,POS Terminal
+DEMO-0414,8,0,0,0,0.64,425.65,Gaming,Credit Card,ATM
+DEMO-0415,0,0,0,0,6.79,139.94,Utilities,Debit Card,Desktop
+DEMO-0416,3,0,0,0,4.49,38.61,Gaming,Crypto,POS Terminal
+DEMO-0417,21,0,2,0,2.56,38.35,Entertainment,Crypto,ATM
+DEMO-0418,8,0,0,0,0.84,37.6,Entertainment,Mobile Payment,Tablet
+DEMO-0419,6,0,1,0,1.92,46.36,Jewelry,Cheque,Tablet
+DEMO-0420,9,0,0,0,0.54,71.55,Fuel,Mobile Payment,Mobile
+DEMO-0421,21,0,1,0,3.14,10.46,Electronics,Credit Card,ATM
+DEMO-0422,7,0,0,0,3.34,48.3,Jewelry,Credit Card,Tablet
+DEMO-0423,0,0,0,0,8.74,159.79,Grocery,Credit Card,ATM
+DEMO-0424,17,0,0,0,8.52,264.91,Entertainment,Cheque,Tablet
+DEMO-0425,21,0,1,0,11.88,79.87,Crypto Exchange,Cheque,POS Terminal
+DEMO-0426,4,0,0,0,8.03,13.25,Online Shopping,Mobile Payment,ATM
+DEMO-0427,19,0,0,0,0.42,183.06,Education,Crypto,Desktop
+DEMO-0428,8,0,0,0,3.13,146.5,Travel,Debit Card,Mobile
+DEMO-0429,19,0,0,1,1.57,100.57,Utilities,Crypto,ATM
+DEMO-0430,20,0,3,0,11.07,1135.62,Gaming,Bank Transfer,Mobile
+DEMO-0431,4,0,0,0,0.94,1033.2,Education,Crypto,Mobile
+DEMO-0432,10,0,4,0,8.56,54.78,Clothing,Bank Transfer,Mobile
+DEMO-0433,2,0,0,0,16.51,204.33,Travel,Bank Transfer,ATM
+DEMO-0434,6,1,5,0,12.7,65.27,Jewelry,Cheque,Desktop
+DEMO-0435,9,0,0,0,8.43,16.49,Electronics,Cheque,Tablet
+DEMO-0436,21,1,0,0,3.15,564.88,Utilities,Credit Card,POS Terminal
+DEMO-0437,10,0,1,1,2.26,194.52,Fuel,Credit Card,POS Terminal
+DEMO-0438,6,0,1,0,0.18,167.31,Gaming,Crypto,POS Terminal
+DEMO-0439,11,0,2,0,0.32,21.52,Grocery,Debit Card,Mobile
+DEMO-0440,9,0,0,0,27.46,240.77,Gaming,Crypto,Mobile
+DEMO-0441,8,0,0,0,2.16,80.45,Jewelry,Mobile Payment,ATM
+DEMO-0442,15,0,0,0,0.95,18.28,Utilities,Debit Card,POS Terminal
+DEMO-0443,17,0,4,0,0.51,51.03,Crypto Exchange,Mobile Payment,Tablet
+DEMO-0444,17,0,5,0,5.07,21.41,Entertainment,Mobile Payment,Desktop
+DEMO-0445,7,1,1,0,0.14,131.08,ATM Withdrawal,Debit Card,Desktop
+DEMO-0446,12,1,0,0,8.07,833.97,Healthcare,Debit Card,POS Terminal
+DEMO-0447,10,0,0,0,2.23,64.79,Travel,Debit Card,ATM
+DEMO-0448,20,0,0,0,8.98,204.91,Online Shopping,Debit Card,Desktop
+DEMO-0449,22,0,1,0,7.11,238.97,Gaming,Cheque,Tablet
+DEMO-0450,6,0,0,0,4.17,8.42,Jewelry,Cheque,Desktop
+DEMO-0451,6,0,3,0,7.33,409.1,Clothing,Crypto,POS Terminal
+DEMO-0452,2,1,0,0,5.6,109.44,Grocery,Debit Card,Desktop
+DEMO-0453,11,0,0,0,0.03,234.18,Restaurant,Bank Transfer,Mobile
+DEMO-0454,21,0,2,0,1.87,4.22,Healthcare,Crypto,Tablet
+DEMO-0455,21,0,3,0,0.36,16.2,Online Shopping,Credit Card,Tablet
+DEMO-0456,16,0,0,1,1.53,64.67,Online Shopping,Credit Card,POS Terminal
+DEMO-0457,12,0,3,0,4.54,36.61,Travel,Bank Transfer,POS Terminal
+DEMO-0458,8,1,0,0,1.79,123.94,Travel,Cheque,POS Terminal
+DEMO-0459,3,1,0,0,5.04,180.25,Electronics,Credit Card,POS Terminal
+DEMO-0460,21,1,0,0,3.07,92.6,Clothing,Credit Card,Tablet
+DEMO-0461,21,0,0,0,7.75,306.66,Travel,Crypto,Tablet
+DEMO-0462,15,1,0,1,2.27,99.96,Crypto Exchange,Bank Transfer,Desktop
+DEMO-0463,17,1,3,1,1.27,116.85,Grocery,Credit Card,Desktop
+DEMO-0464,20,1,5,0,1.22,138.4,Entertainment,Debit Card,POS Terminal
+DEMO-0465,18,0,0,1,0.05,149.75,ATM Withdrawal,Debit Card,Desktop
+DEMO-0466,18,0,0,0,8.03,117.29,Restaurant,Bank Transfer,Tablet
+DEMO-0467,4,0,1,0,2.6,15.07,Entertainment,Debit Card,Tablet
+DEMO-0468,10,1,0,1,15.61,167.1,Grocery,Cheque,ATM
+DEMO-0469,0,0,1,0,0.98,3.44,Entertainment,Debit Card,Tablet
+DEMO-0470,22,0,0,1,0.3,117.52,Fuel,Credit Card,ATM
+DEMO-0471,16,0,0,0,1.47,174.4,Utilities,Cheque,ATM
+DEMO-0472,12,0,0,0,3.64,51.52,Online Shopping,Bank Transfer,ATM
+DEMO-0473,0,0,4,0,11.37,121.89,Jewelry,Crypto,ATM
+DEMO-0474,6,0,1,0,4.26,47.01,Crypto Exchange,Mobile Payment,Tablet
+DEMO-0475,17,0,3,0,0.15,45.26,Electronics,Bank Transfer,POS Terminal
+DEMO-0476,20,1,3,0,6.27,53.35,Entertainment,Credit Card,Tablet
+DEMO-0477,22,0,0,1,1.17,49.08,Grocery,Debit Card,Desktop
+DEMO-0478,21,0,2,0,3.23,29.96,Education,Cheque,Mobile
+DEMO-0479,16,0,1,0,10.17,42.66,Restaurant,Bank Transfer,POS Terminal
+DEMO-0480,20,0,0,0,0.29,128.74,Healthcare,Crypto,Desktop
+DEMO-0481,22,0,0,0,2.19,247.75,Jewelry,Mobile Payment,Mobile
+DEMO-0482,16,0,0,0,0.72,380.43,Travel,Bank Transfer,Tablet
+DEMO-0483,20,0,0,0,4.33,14.7,Education,Crypto,Mobile
+DEMO-0484,6,1,1,0,3.37,242.94,Education,Bank Transfer,Desktop
+DEMO-0485,21,1,0,1,4.08,90.38,Education,Debit Card,Mobile
+DEMO-0486,9,0,0,0,7.77,36.33,Entertainment,Debit Card,POS Terminal
+DEMO-0487,8,0,3,0,0.1,214.63,Jewelry,Mobile Payment,Mobile
+DEMO-0488,20,0,0,0,2.0,25.88,Restaurant,Bank Transfer,Mobile
+DEMO-0489,17,0,0,0,4.19,80.45,Travel,Credit Card,ATM
+DEMO-0490,23,0,2,0,3.83,242.14,Clothing,Crypto,POS Terminal
+DEMO-0491,3,0,3,0,2.21,162.09,Utilities,Credit Card,POS Terminal
+DEMO-0492,22,0,0,0,18.34,161.06,Jewelry,Debit Card,ATM
+DEMO-0493,20,1,1,0,5.34,53.94,Education,Cheque,Mobile
+DEMO-0494,12,1,0,0,6.18,354.04,Travel,Bank Transfer,POS Terminal
+DEMO-0495,16,0,2,1,3.65,283.04,Jewelry,Bank Transfer,ATM
+DEMO-0496,21,0,0,0,4.62,10.55,Travel,Cheque,POS Terminal
+DEMO-0497,14,1,0,0,2.13,51.38,Gaming,Bank Transfer,Tablet
+DEMO-0498,17,0,0,0,3.81,9.22,Utilities,Cheque,ATM
+DEMO-0499,1,0,0,0,4.05,5.96,Entertainment,Credit Card,POS Terminal
+DEMO-0500,7,0,0,0,15.8,41.6,Jewelry,Cheque,Desktop
